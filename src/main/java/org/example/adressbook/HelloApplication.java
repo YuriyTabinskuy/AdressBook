@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        // Головне вікно
+
         FXMLLoader mainLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene mainScene = new Scene(mainLoader.load(), 600, 550);
         stage.setTitle("Hello!");
@@ -18,9 +18,24 @@ public class HelloApplication extends Application {
 
 
 
+        testData();
+
     }
+
+
+    private void testData(){
+        CollectionAddressBook addressBook = new CollectionAddressBook();
+        addressBook.fillTestData();
+        addressBook.print();
+    }
+
 
     public static void main(String[] args) {
         launch();
     }
+
+
+
+
+
 }

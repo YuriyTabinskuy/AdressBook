@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adressbook.Lab6Controller">
+    <children>
+        <VBox layoutX="10.0" layoutY="10.0" prefHeight="480.0" prefWidth="680.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="40.0" spacing="100.0">
+                    <children>
+                        <Label text="CheckBox">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="ChoiceBox">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="ComboBox">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="RadioButton">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Separator prefWidth="200.0" />
+                <HBox prefHeight="300.0" prefWidth="680.0" spacing="20.0">
+                    <children>
+                        <VBox prefWidth="180.0" spacing="5.0">
+                            <children>
+                                <Label text="Властивості людино-машинного інтерфейсу:" wrapText="true" />
+                                <CheckBox fx:id="chkПогодженість" mnemonicParsing="false" text="Погодженість" />
+                                <CheckBox fx:id="chkДружність" mnemonicParsing="false" text="Дружність" />
+                                <CheckBox fx:id="chkГнучкість" mnemonicParsing="false" text="Гнучкість" />
+                                <CheckBox fx:id="chkСкладність" mnemonicParsing="false" text="Складність" />
+                                <Button mnemonicParsing="false" onAction="#checkCheckBox" text="Відповідь" />
+                                <Label fx:id="lblCheckBoxResult" wrapText="true" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="180.0" spacing="5.0">
+                            <children>
+                                <Label text="Файл sample.fxml відповідав за логіку програми." wrapText="true" />
+                                <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
+                                <Button mnemonicParsing="false" onAction="#checkChoiceBox" text="Відповідь" />
+                                <Label fx:id="lblChoiceBoxResult" wrapText="true" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="180.0" spacing="5.0">
+                            <children>
+                                <Label text="Панель, яка складається із п'яти частин, в яких..." wrapText="true" />
+                                <ComboBox fx:id="comboBox" prefWidth="150.0" />
+                                <Button mnemonicParsing="false" onAction="#checkComboBox" text="Відповідь" />
+                                <Label fx:id="lblComboBoxResult" wrapText="true" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="180.0" spacing="5.0">
+                            <children>
+                                <Label text="У якому меню Scene Builder можна змінити загальні налаштування компоненти (колір, текст)?">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <RadioButton fx:id="rbProperties" mnemonicParsing="false" text="Properties">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="rbGroup" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="rbLayout" mnemonicParsing="false" text="Layout" toggleGroup="$rbGroup" />
+                                <RadioButton fx:id="rbCode" mnemonicParsing="false" text="Code" toggleGroup="$rbGroup" />
+                                <RadioButton fx:id="rbControls" mnemonicParsing="false" text="Controls" toggleGroup="$rbGroup" />
+                                <Button mnemonicParsing="false" onAction="#checkRadioButton" text="Відповідь" />
+                                <Label fx:id="lblRadioButtonResult" wrapText="true" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <Separator prefWidth="200.0" />
+                <HBox alignment="CENTER" prefHeight="40.0" spacing="50.0">
+                    <children>
+                        <Label fx:id="lblTotalResult" text="Всього правильних відповідей: 0/4">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="btnOpenLab7" mnemonicParsing="false" onAction="#openLab7Window" text="Перейти до Lab 7" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -5,17 +5,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adressbook.OtherLabs">
+<AnchorPane prefHeight="400.0" prefWidth="600.0"  style="-fx-background-color: #E1F5FE;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adressbook.OtherLabs">
    <children>
-      <Button fx:id="choose" layoutX="256.0" layoutY="338.0" mnemonicParsing="false" onAction="#changeLabel" prefHeight="44.0" prefWidth="94.0" text="Так" />
-      <Label fx:id="text" alignment="CENTER" layoutX="56.0" layoutY="24.0" prefHeight="38.0" prefWidth="502.0" text="Бажаєте змінити картинку?" textAlignment="CENTER">
+      <Button fx:id="choose" layoutX="256.0" layoutY="338.0" mnemonicParsing="false" onAction="#changeLabel" prefHeight="44.0" stylesheets="@my.css" prefWidth="94.0" text="Замінити" />
+      <Label fx:id="text" alignment="CENTER" layoutX="56.0" layoutY="24.0" prefHeight="38.0" prefWidth="502.0" text="Картинка 1 (2222.jpg)" textAlignment="CENTER">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
       <ImageView fx:id="imageView" fitHeight="208.0" fitWidth="302.0" layoutX="149.0" layoutY="85.0" pickOnBounds="true">
          <image>
-            <Image url="@sky.jpg" />
+            <Image url="@2222.jpg" />
          </image>
       </ImageView>
    </children>

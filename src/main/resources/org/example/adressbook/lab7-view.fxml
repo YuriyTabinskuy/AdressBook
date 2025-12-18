@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.paint.Color?>
+
+<VBox fx:id="mainVBox" prefHeight="600.0" prefWidth="800.0" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adressbook.Lab7Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Практична робота №7: DatePicker, ColorPicker, Slider, MediaView">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Separator prefWidth="200.0" />
+
+        <VBox spacing="5.0">
+            <children>
+                <Label text="1. DatePicker (Завдання 1): Оберіть дату" />
+                <DatePicker fx:id="datePicker" onAction="#handleDatePicker" />
+                <Label fx:id="lblDateResult" text="Дата не обрана." />
+            </children>
+        </VBox>
+        <Separator prefWidth="200.0" />
+
+        <VBox fx:id="colorBackground" prefHeight="70.0" spacing="5.0" style="-fx-background-color: lightgrey;">
+            <children>
+                <Label text="2. ColorPicker (Завдання 2): Оберіть колір фону" />
+                <ColorPicker fx:id="colorPicker" onAction="#handleColorPicker">
+                    <value>
+                        <Color red="0.8274509803921568" green="0.8274509803921568" blue="0.8274509803921568" opacity="1.0" />
+                    </value>
+                </ColorPicker>
+                <Label fx:id="lblColorResult" text="Обраний колір: #D3D3D3" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+        <Separator prefWidth="200.0" />
+
+        <VBox spacing="5.0">
+            <children>
+                <Label text="3. Slider (Завдання 3): Регулювання гучності медіа" />
+                <Slider fx:id="volumeSlider" prefWidth="400.0" />
+                <Label fx:id="lblSliderResult" text="Гучність: 50%" />
+            </children>
+        </VBox>
+        <Separator prefWidth="200.0" />
+
+        <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label text="4. MediaView та FileChooser (Завдання 4, 5): Оберіть та відтворіть медіафайл" />
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Button fx:id="btnOpenMedia" mnemonicParsing="false" onAction="#openMediaFile" text="Обрати медіафайл (FileChooser)" />
+                        <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#playMedia" text="Play" />
+                        <Button fx:id="btnStop" mnemonicParsing="false" onAction="#stopMedia" text="Stop" />
+                    </children>
+                </HBox>
+
+                <MediaView fx:id="mediaView" fitHeight="250.0" fitWidth="500.0" style="-fx-border-color: black; -fx-border-width: 1;" />
+                <Label text="Примітка: MediaView відображає відео (.mp4) або лише звук для аудіофайлів (.mp3). Використовуйте FileChooser для вибору файлу." wrapText="true" />
+            </children>
+        </VBox>
+    </children>
+</VBox>

@@ -1,12 +1,18 @@
 .button {
-    -fx-background-color: linear-gradient(to bottom, #ff4d4d, #b30000);
-    -fx-text-fill: white;
+    -fx-background-color: #3498DB;
+    -fx-text-fill: #FFFFFF;
     -fx-font-size: 14px;
-    -fx-font-weight: bold;
-    -fx-background-radius: 10;
+    -fx-font-weight: normal;
+    -fx-background-radius: 20;
     -fx-cursor: hand;
-    -fx-border-color: black;
-    -fx-border-width: 2;
-    -fx-border-radius: 10;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 2, 2);
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0.2, 0, 2);
+}
+
+
+.button:hover {
+    -fx-background-color: #2980B9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.4, 0, 3);
 }
